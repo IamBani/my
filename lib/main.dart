@@ -1,4 +1,6 @@
+import 'package:dome/page/about.dart';
 import 'package:flutter/material.dart';
+import './page/about.dart';
 
 import './tab/home.dart';
 import './tab/classify.dart';
@@ -19,6 +21,12 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
+      routes: {
+        "/about": (context) {
+          return about();
+        }
+      },
+      debugShowCheckedModeBanner: false,
       home: new Scaffold(
           bottomNavigationBar: BottomNavigationBar(
             onTap: (int index) {
